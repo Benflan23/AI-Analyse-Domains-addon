@@ -1,0 +1,284 @@
+{
+  "extension_title": {
+    "message": "Domain List Filter AI",
+    "description": "Titre de l'extension"
+  },
+  "extension_description": {
+    "message": "Capture, filtre et analyse des listes de domaines avec l'IA.",
+    "description": "Description de l'extension"
+  },
+  "tab_capture": {
+    "message": "Capture",
+    "description": "Nom de l'onglet Capture"
+  },
+  "tab_filters": {
+    "message": "Filtres",
+    "description": "Nom de l'onglet Filtres"
+  },
+  "tab_settings": {
+    "message": "Paramètres",
+    "description": "Nom de l'onglet Paramètres"
+  },
+  "tab_results": {
+    "message": "Résultats",
+    "description": "Nom de l'onglet Résultats"
+  },
+  "tab_history": {
+    "message": "Historique",
+    "description": "Nom de l'onglet Historique"
+  },
+  "capture_domains": {
+    "message": "Capturer les domaines",
+    "description": "Texte du bouton de capture"
+  },
+  "auto_capture": {
+    "message": "Capture automatique",
+    "description": "Option de capture automatique"
+  },
+  "filters_title": {
+    "message": "Filtres de domaines",
+    "description": "Titre de la section filtres"
+  },
+  "exclude_digits": {
+    "message": "Exclure domaines avec chiffres",
+    "description": "Filtre pour exclure les chiffres"
+  },
+  "only_com": {
+    "message": "Uniquement .com",
+    "description": "Filtre pour les .com"
+  },
+  "exclude_hyphens": {
+    "message": "Exclure tirets",
+    "description": "Filtre pour exclure les tirets"
+  },
+  "exclude_keywords": {
+    "message": "Exclure mots-clés :",
+    "description": "Label pour les mots-clés à exclure"
+  },
+  "min_length": {
+    "message": "Longueur min :",
+    "description": "Label pour la longueur minimale"
+  },
+  "max_length": {
+    "message": "Longueur max :",
+    "description": "Label pour la longueur maximale"
+  },
+  "allowed_extensions": {
+    "message": "Extensions autorisées :",
+    "description": "Label pour les extensions autorisées"
+  },
+  "ai_config_title": {
+    "message": "Configuration IA",
+    "description": "Titre de la section configuration IA"
+  },
+  "ai_provider": {
+    "message": "Fournisseur IA :",
+    "description": "Label pour le fournisseur IA"
+  },
+  "api_key": {
+    "message": "Clé API :",
+    "description": "Label pour la clé API"
+  },
+  "test_connection": {
+    "message": "Tester connexion",
+    "description": "Texte du bouton de test de connexion"
+  },
+  "get_api_key": {
+    "message": "Comment obtenir une clé API ?",
+    "description": "Texte du lien pour obtenir une clé API"
+  },
+  "prompt_title": {
+    "message": "Prompt IA personnalisé",
+    "description": "Titre de la section prompt IA"
+  },
+  "save_prompt": {
+    "message": "Sauvegarder le prompt",
+    "description": "Texte du bouton pour sauvegarder le prompt"
+  },
+  "results_title": {
+    "message": "Résultats de l'analyse IA",
+    "description": "Titre de la section résultats"
+  },
+  "export_csv": {
+    "message": "CSV",
+    "description": "Option d'export CSV"
+  },
+  "export_txt": {
+    "message": "TXT",
+    "description": "Option d'export TXT"
+  },
+  "export_json": {
+    "message": "JSON",
+    "description": "Option d'export JSON"
+  },
+  "no_results": {
+    "message": "Aucun résultat à afficher. Capturez des domaines et lancez une analyse.",
+    "description": "Message quand il n'y a pas de résultats"
+  },
+  "history_title": {
+    "message": "Historique des analyses",
+    "description": "Titre de la section historique"
+  },
+  "search_placeholder": {
+    "message": "Rechercher...",
+    "description": "Placeholder pour la recherche"
+  },
+  "clear_history": {
+    "message": "Vider",
+    "description": "Texte du bouton pour vider l'historique"
+  },
+  "no_history": {
+    "message": "Aucun historique disponible.",
+    "description": "Message quand il n'y a pas d'historique"
+  },
+  "capturing": {
+    "message": "Capture en cours...",
+    "description": "Message pendant la capture"
+  },
+  "captured_count": {
+    "message": "domaines capturés",
+    "description": "Suffixe pour le nombre de domaines capturés"
+  },
+  "filtered_count": {
+    "message": "domaines après filtrage",
+    "description": "Suffixe pour le nombre de domaines après filtrage"
+  },
+  "analyzing": {
+    "message": "Analyse en cours...",
+    "description": "Message pendant l'analyse IA"
+  },
+  "analysis_complete": {
+    "message": "Analyse terminée",
+    "description": "Message quand l'analyse est terminée"
+  },
+  "connection_success": {
+    "message": "Connexion réussie",
+    "description": "Message de succès de connexion API"
+  },
+  "connection_failed": {
+    "message": "Échec de la connexion",
+    "description": "Message d'échec de connexion API"
+  },
+  "prompt_saved": {
+    "message": "Prompt sauvegardé",
+    "description": "Message de confirmation de sauvegarde du prompt"
+  },
+  "settings_saved": {
+    "message": "Paramètres sauvegardés",
+    "description": "Message de confirmation de sauvegarde des paramètres"
+  },
+  "export_success": {
+    "message": "Export réussi",
+    "description": "Message de succès d'export"
+  },
+  "error_occurred": {
+    "message": "Une erreur est survenue",
+    "description": "Message d'erreur générique"
+  },
+  "no_domains_captured": {
+    "message": "Aucun domaine capturé",
+    "description": "Message quand il n'y a pas de domaines capturés"
+  },
+  "others": {
+    "message": "autres",
+    "description": "Suffixe pour indiquer des éléments supplémentaires"
+  },
+  "favorite_action_info": {
+    "message": "Action sur le favori pour le domaine \"$DOMAIN$\". (Logique à implémenter)",
+    "description": "Message d'info pour l'action favori",
+    "placeholders": {
+      "DOMAIN": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+  "analysis_by": {
+    "message": "Analyse par $PROVIDER$",
+    "description": "Titre de l'analyse avec le nom du fournisseur",
+    "placeholders": {
+      "PROVIDER": {
+        "content": "$1",
+        "example": "OpenAI"
+      }
+    }
+  },
+  "domains_analyzed": {
+    "message": "Domaines analysés",
+    "description": "Label pour le nombre de domaines analysés"
+  },
+  "tokens_used": {
+    "message": "Tokens utilisés",
+    "description": "Label pour les tokens utilisés"
+  },
+  "testing_connection": {
+    "message": "Test en cours...",
+    "description": "Message pendant le test de connexion"
+  },
+  "domain": {
+    "message": "Domaine",
+    "description": "En-tête de colonne pour le domaine"
+  },
+  "extension": {
+    "message": "Extension",
+    "description": "En-tête de colonne pour l'extension"
+  },
+  "length": {
+    "message": "Longueur",
+    "description": "En-tête de colonne pour la longueur"
+  },
+  "analysis_report_title": {
+    "message": "Rapport d'analyse de domaines",
+    "description": "Titre du rapport d'analyse TXT"
+  },
+  "number_of_domains": {
+    "message": "Nombre de domaines",
+    "description": "Label pour le nombre total de domaines dans le rapport TXT"
+  },
+  "domains_analyzed_list": {
+    "message": "Liste des domaines analysés",
+    "description": "En-tête pour la liste des domaines dans le rapport TXT"
+  },
+  "analysis_result_heading": {
+    "message": "Résultat de l'analyse",
+    "description": "En-tête pour le résultat de l'analyse IA dans le rapport TXT"
+  },
+  "domains_analyzed_count": {
+    "message": "domaines analysés",
+    "description": "Suffixe pour le nombre de domaines analysés dans l'historique"
+  },
+  "analysis_restored_success": {
+    "message": "Analyse restaurée depuis l'historique.",
+    "description": "Message de succès de restauration d'analyse"
+  },
+  "history_entry_not_found": {
+    "message": "Entrée d'historique non trouvée.",
+    "description": "Message d'erreur si l'entrée d'historique n'existe pas"
+  },
+  "error_loading_history": {
+    "message": "Erreur lors du chargement de l'historique.",
+    "description": "Message d'erreur de chargement de l'historique"
+  },
+  "confirm_clear_history": {
+    "message": "Êtes-vous sûr de vouloir vider l'historique ?",
+    "description": "Message de confirmation pour vider l'historique"
+  },
+  "history_cleared": {
+    "message": "Historique vidé",
+    "description": "Message de confirmation de vidage de l'historique"
+  },
+  "new_domains_detected": {
+    "message": "$COUNT$ nouveaux domaines détectés",
+    "description": "Message pour les nouveaux domaines détectés",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "10"
+      }
+    }
+  },
+  "language_changed_info": {
+    "message": "La préférence de langue a été enregistrée. Certains textes peuvent nécessiter un redémarrage du navigateur pour être mis à jour.",
+    "description": "Information sur le changement de langue."
+  }
+}

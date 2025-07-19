@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain List Filter AI</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- En-tête avec titre et switch de langue -->
+        <header class="popup-header">
+            <h1 class="popup-title" data-i18n="extension_title">Domain List Filter AI</h1>
+            <div class="language-switch">
+                <button id="langFr" class="lang-btn active" data-lang="fr">FR</button>
+                <button id="langEn" class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </header>
+
+        <!-- Navigation par onglets -->
+        <nav class="tab-navigation">
+            <button class="tab-btn active" data-tab="capture" data-i18n="tab_capture">Capture</button>
+            <button class="tab-btn" data-tab="filters" data-i18n="tab_filters">Filtres</button>
+            <button class="tab-btn" data-tab="settings" data-i18n="tab_settings">Paramètres</button>
+            <button class="tab-btn" data-tab="results" data-i18n="tab_results">Résultats</button>
+            <button class="tab-btn" data-tab="history" data-i18n="tab_history">Historique</button>
+        </nav>
+
+        <!-- Contenu principal -->
+        <main class="popup-content">
+            <!-- Section Capture -->
+            <section id="capture-section" class="tab-content active">
+                <div class="capture-controls">
+                    <button id="captureBtn" class="primary-btn" data-i18n="capture_domains">
+                        <span class="btn-icon">🔍</span>
+                        Capturer les domaines
+                    </button>
+                    <div class="capture-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="autoCaptureToggle">
+                            <span data-i18n="auto_capture">Capture automatique</span>
+                        </label>
+                    </div>
+                </div>
+                <div id="captureStatus" class="status-message"></div>
+                <div id="capturedDomains" class="domain-list"></div>
+            </section>
+
+            <!-- Section Filtres -->
+            <section id="filters-section" class="tab-content">
+                <div class="filter-group">
+                    <h3 data-i18n="filters_title">Filtres de domaines</h3>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="excludeDigits">
+                        <span data-i18n="exclude_digits">Exclure domaines avec chiffres</span>
+                    </label>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="onlyCom">
+                        <span data-i18n="only_com">Uniquement .com</span>
+                    </label>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="excludeHyphens">
+                        <span data-i18n="exclude_hyphens">Exclure tirets</span>
+                    </label>
+                    
+                    <div class="input-group">
+                        <label data-i18n="exclude_keywords">Exclure mots-clés :</label>
+                        <textarea id="excludeKeywords" placeholder="Entrez les mots-clés à exclure, un par ligne"></textarea>
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label data-i18n="min_length">Longueur min :</label>
+                            <input type="number" id="minLength" min="0" value="0">
+                        </div>
+                        <div class="input-group">
+                            <label data-i18n="max_length">Longueur max :</label>
+                            <input type="number" id="maxLength" min="1" value="50">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label data-i18n="allowed_extensions">Extensions autorisées :</label>
+                        <div class="extension-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="com" class="extension-checkbox">
+                                <span>.com</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="net" class="extension-checkbox">
+                                <span>.net</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="org" class="extension-checkbox">
+                                <span>.org</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="fr" class="extension-checkbox">
+                                <span>.fr</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="io" class="extension-checkbox">
+                                <span>.io</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Paramètres -->
+            <section id="settings-section" class="tab-content">
+                <div class="settings-group">
+                    <h3 data-i18n="ai_config_title">Configuration IA</h3>
+                    
+                    <div class="input-group">
+                        <label data-i18n="ai_provider">Fournisseur IA :</label>
+                        <select id="aiProviderSelect">
+                            <option value="gemini">Gemini (Google AI)</option>
+                            <option value="openai">OpenAI ChatGPT</option>
+                            <option value="claude">Claude (Anthropic)</option>
+                            <option value="llama">Llama (Meta)</option>
+                            <option value="mistral">Mistral AI</option>
+                            <option value="cohere">Cohere AI</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label data-i18n="api_key">Clé API :</label>
+                        <input type="password" id="apiKeyInput" placeholder="Collez votre clé API ici">
+                        <button id="toggleApiKey" class="toggle-btn" title="Afficher/Masquer">👁️</button>
+                    </div>
+                    
+                    <div class="button-row">
+                        <button id="testConnectionBtn" class="secondary-btn" data-i18n="test_connection">
+                            Tester connexion
+                        </button>
+                        <a id="apiDocLink" href="#" target="_blank" class="doc-link" data-i18n="get_api_key">
+                            Comment obtenir une clé API ?
+                        </a>
+                    </div>
+                    
+                    <div id="apiStatus" class="status-message"></div>
+                </div>
+                
+                <div class="settings-group">
+                    <h3 data-i18n="prompt_title">Prompt IA personnalisé</h3>
+                    <div class="input-group">
+                        <textarea id="customPrompt" rows="6" placeholder="Entrez votre prompt personnalisé pour l'IA..."></textarea>
+                    </div>
+                    <button id="savePromptBtn" class="secondary-btn" data-i18n="save_prompt">
+                        Sauvegarder le prompt
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section Résultats -->
+            <section id="results-section" class="tab-content">
+                <div class="results-header">
+                    <h3 data-i18n="results_title">Résultats de l'analyse IA</h3>
+                    <div class="results-actions">
+                        <button id="exportCsvBtn" class="export-btn" data-i18n="export_csv">
+                            📊 CSV
+                        </button>
+                        <button id="exportTxtBtn" class="export-btn" data-i18n="export_txt">
+                            📄 TXT
+                        </button>
+                        <button id="exportJsonBtn" class="export-btn" data-i18n="export_json">
+                            📋 JSON
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="resultsContent" class="results-content">
+                    <div class="empty-state" data-i18n="no_results">
+                        Aucun résultat à afficher. Capturez des domaines et lancez une analyse.
+                    </div>
+                </div>
+                
+                <div id="resultsStats" class="results-stats"></div>
+            </section>
+
+            <!-- Section Historique -->
+            <section id="history-section" class="tab-content">
+                <div class="history-header">
+                    <h3 data-i18n="history_title">Historique des analyses</h3>
+                    <div class="history-actions">
+                        <input type="search" id="historySearch" placeholder="Rechercher..." data-i18n-placeholder="search_placeholder">
+                        <button id="clearHistoryBtn" class="danger-btn" data-i18n="clear_history">
+                            🗑️ Vider
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="historyContent" class="history-content">
+                    <div class="empty-state" data-i18n="no_history">
+                        Aucun historique disponible.
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Zone de notifications -->
+        <div id="notifications" class="notifications-container"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+

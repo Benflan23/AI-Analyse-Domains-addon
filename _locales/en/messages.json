@@ -1,0 +1,284 @@
+{
+  "extension_title": {
+    "message": "Domain List Filter AI",
+    "description": "Extension title"
+  },
+  "extension_description": {
+    "message": "Capture, filter and analyze domain lists with AI.",
+    "description": "Extension description"
+  },
+  "tab_capture": {
+    "message": "Capture",
+    "description": "Capture tab name"
+  },
+  "tab_filters": {
+    "message": "Filters",
+    "description": "Filters tab name"
+  },
+  "tab_settings": {
+    "message": "Settings",
+    "description": "Settings tab name"
+  },
+  "tab_results": {
+    "message": "Results",
+    "description": "Results tab name"
+  },
+  "tab_history": {
+    "message": "History",
+    "description": "History tab name"
+  },
+  "capture_domains": {
+    "message": "Capture domains",
+    "description": "Capture button text"
+  },
+  "auto_capture": {
+    "message": "Auto capture",
+    "description": "Auto capture option"
+  },
+  "filters_title": {
+    "message": "Domain filters",
+    "description": "Filters section title"
+  },
+  "exclude_digits": {
+    "message": "Exclude domains with digits",
+    "description": "Filter to exclude digits"
+  },
+  "only_com": {
+    "message": "Only .com",
+    "description": "Filter for .com only"
+  },
+  "exclude_hyphens": {
+    "message": "Exclude hyphens",
+    "description": "Filter to exclude hyphens"
+  },
+  "exclude_keywords": {
+    "message": "Exclude keywords:",
+    "description": "Label for keywords to exclude"
+  },
+  "min_length": {
+    "message": "Min length:",
+    "description": "Label for minimum length"
+  },
+  "max_length": {
+    "message": "Max length:",
+    "description": "Label for maximum length"
+  },
+  "allowed_extensions": {
+    "message": "Allowed extensions:",
+    "description": "Label for allowed extensions"
+  },
+  "ai_config_title": {
+    "message": "AI Configuration",
+    "description": "AI configuration section title"
+  },
+  "ai_provider": {
+    "message": "AI Provider:",
+    "description": "Label for AI provider"
+  },
+  "api_key": {
+    "message": "API Key:",
+    "description": "Label for API key"
+  },
+  "test_connection": {
+    "message": "Test connection",
+    "description": "Test connection button text"
+  },
+  "get_api_key": {
+    "message": "How to get an API key?",
+    "description": "Link text to get API key"
+  },
+  "prompt_title": {
+    "message": "Custom AI Prompt",
+    "description": "AI prompt section title"
+  },
+  "save_prompt": {
+    "message": "Save prompt",
+    "description": "Save prompt button text"
+  },
+  "results_title": {
+    "message": "AI Analysis Results",
+    "description": "Results section title"
+  },
+  "export_csv": {
+    "message": "CSV",
+    "description": "CSV export option"
+  },
+  "export_txt": {
+    "message": "TXT",
+    "description": "TXT export option"
+  },
+  "export_json": {
+    "message": "JSON",
+    "description": "JSON export option"
+  },
+  "no_results": {
+    "message": "No results to display. Capture domains and run an analysis.",
+    "description": "Message when there are no results"
+  },
+  "history_title": {
+    "message": "Analysis History",
+    "description": "History section title"
+  },
+  "search_placeholder": {
+    "message": "Search...",
+    "description": "Search placeholder"
+  },
+  "clear_history": {
+    "message": "Clear",
+    "description": "Clear history button text"
+  },
+  "no_history": {
+    "message": "No history available.",
+    "description": "Message when there is no history"
+  },
+  "capturing": {
+    "message": "Capturing...",
+    "description": "Message during capture"
+  },
+  "captured_count": {
+    "message": "domains captured",
+    "description": "Suffix for number of captured domains"
+  },
+  "filtered_count": {
+    "message": "domains after filtering",
+    "description": "Suffix for number of domains after filtering"
+  },
+  "analyzing": {
+    "message": "Analyzing...",
+    "description": "Message during AI analysis"
+  },
+  "analysis_complete": {
+    "message": "Analysis complete",
+    "description": "Message when analysis is complete"
+  },
+  "connection_success": {
+    "message": "Connection successful",
+    "description": "API connection success message"
+  },
+  "connection_failed": {
+    "message": "Connection failed",
+    "description": "API connection failure message"
+  },
+  "prompt_saved": {
+    "message": "Prompt saved",
+    "description": "Prompt save confirmation message"
+  },
+  "settings_saved": {
+    "message": "Settings saved",
+    "description": "Settings save confirmation message"
+  },
+  "export_success": {
+    "message": "Export successful",
+    "description": "Export success message"
+  },
+  "error_occurred": {
+    "message": "An error occurred",
+    "description": "Generic error message"
+  },
+  "no_domains_captured": {
+    "message": "No domains captured",
+    "description": "Message when there are no domains captured"
+  },
+  "others": {
+    "message": "others",
+    "description": "Suffix for additional items"
+  },
+  "favorite_action_info": {
+    "message": "Favorite action for domain \"$DOMAIN$\". (Logic to be implemented)",
+    "description": "Info message for favorite action",
+    "placeholders": {
+      "DOMAIN": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+  "analysis_by": {
+    "message": "Analysis by $PROVIDER$",
+    "description": "Analysis title with provider name",
+    "placeholders": {
+      "PROVIDER": {
+        "content": "$1",
+        "example": "OpenAI"
+      }
+    }
+  },
+  "domains_analyzed": {
+    "message": "Domains analyzed",
+    "description": "Label for number of analyzed domains"
+  },
+  "tokens_used": {
+    "message": "Tokens used",
+    "description": "Label for tokens used"
+  },
+  "testing_connection": {
+    "message": "Testing connection...",
+    "description": "Message while testing connection"
+  },
+  "domain": {
+    "message": "Domain",
+    "description": "Column header for domain"
+  },
+  "extension": {
+    "message": "Extension",
+    "description": "Column header for extension"
+  },
+  "length": {
+    "message": "Length",
+    "description": "Column header for length"
+  },
+  "analysis_report_title": {
+    "message": "Domain Analysis Report",
+    "description": "TXT analysis report title"
+  },
+  "number_of_domains": {
+    "message": "Number of domains",
+    "description": "Label for total number of domains in TXT report"
+  },
+  "domains_analyzed_list": {
+    "message": "List of analyzed domains",
+    "description": "Header for list of domains in TXT report"
+  },
+  "analysis_result_heading": {
+    "message": "Analysis Result",
+    "description": "Header for AI analysis result in TXT report"
+  },
+  "domains_analyzed_count": {
+    "message": "domains analyzed",
+    "description": "Suffix for number of domains analyzed in history"
+  },
+  "analysis_restored_success": {
+    "message": "Analysis restored from history.",
+    "description": "Success message for analysis restoration"
+  },
+  "history_entry_not_found": {
+    "message": "History entry not found.",
+    "description": "Error message if history entry does not exist"
+  },
+  "error_loading_history": {
+    "message": "Error loading history.",
+    "description": "Error message for history loading"
+  },
+  "confirm_clear_history": {
+    "message": "Are you sure you want to clear history?",
+    "description": "Confirmation message to clear history"
+  },
+  "history_cleared": {
+    "message": "History cleared",
+    "description": "Confirmation message for history cleared"
+  },
+  "new_domains_detected": {
+    "message": "$COUNT$ new domains detected",
+    "description": "Message for new domains detected",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "10"
+      }
+    }
+  },
+  "language_changed_info": {
+    "message": "Language preference saved. Some texts may require a browser restart to update.",
+    "description": "Information about language change."
+  }
+}
